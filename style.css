@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+:root{
+    --text-color : rgb(0, 0, 0);
+    --letter-space :1px
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-color: rgb(234, 232, 247);
+    font-family: 'Poppins', sans-serif;
+    ;
+}
+
+.grid-container {
+    max-width: 1400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 40px;
+}
+
+header {
+    grid-column: span 3;
+    
+    text-align: center;
+    font-size: 2rem;
+    line-height: 30px;
+    padding: 20px;
+    border-bottom: 1px solid rgb(101, 101, 149);
+
+}
+
+header :nth-child(1) {
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: bolder;
+    color: var(--text-color);
+ 
+
+}
+header :nth-child(2){
+    font-family: 'Bad Script', cursive;
+    font-size: 29px;
+    font-weight: bold;
+    color: var(--text-color);
+    letter-spacing: 2px;
+}
+
+article img {
+    width: 100%;
+}
+
+.sidebar{
+    border-right:  1px solid rgb(101, 101, 149);
+}
+.sidebar a{
+    text-decoration: none;
+    color: blue;
+    transition: 0.7s;
+}
+
+.sidebar a:hover{
+    color: brown;
+}
+.sidebar h3{
+    font-size: 20px;
+    letter-spacing: var(--letter-space);
+}
+
+article h1{
+    font-size: 4rem;
+}
+article p {
+    letter-spacing:var(--letter-space);
+    line-height:25px;
+    word-spacing: 2px;
+    text-align: justify;
+}
+
+.rightsidebar {
+    padding: 20px;
+    border-left: 1px solid rgb(101, 101, 149);
+}
+
+footer {
+    grid-column: span 3;
+    border-top: 1px solid rgb(101, 101, 149) ;
+    text-align: center;
+}
+span{
+    margin-left: 50px;
+}
+
+.copy{
+    margin: 0px;
+    color: blue;
+    cursor: pointer;
+    
+}
+
+@media screen  and (max-width:1020px) {
+    .sidebar{
+        grid-column: span 3;
+        border: 0px;
+        
+    }
+    .sidebar li{
+        display: inline;
+        margin:0px 20px;
+
+    }
+    article{
+        border: 0px;
+        border-top: 1px solid rgb(101, 101, 149) ;
+        margin-left: 20px;
+        grid-column: span 2;
+    }
+  
+}
+
+@media screen and (max-width : 768px) {
+    .grid-container{
+        gap: 20px;
+    }
+    article {
+        margin: 10px;
+        grid-column: span 3;
+    }
+    article h1{
+        font-size: 2rem;
+    }
+    .rightsidebar{
+        border-left: 0px;
+        border-top: 1px solid rgb(101, 101, 149) ;
+        grid-column: span 3;
+    }
+    article p {
+        font-size: 14px;
+    }
+    
+}
